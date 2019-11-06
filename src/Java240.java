@@ -6,7 +6,7 @@ public class Java240 {
     public static void main(String[] args)throws Exception{
         FileInputStream fis=null;
         try{
-            fis=new FileInputStream("testInput.txt");
+            fis=new FileInputStream("D:\\IDEA\\msbsztyjx\\src\\testInput.txt");
             int data=fis.read();
             while (data!=-1){
                 System.out.print(Integer.toHexString(data));
@@ -25,7 +25,7 @@ public class Java240 {
         System.out.println();
         FileReader reader=null;
         try{
-            reader=new FileReader("testInput.txt");
+            reader=new FileReader("D:\\IDEA\\msbsztyjx\\src\\testInput.txt");
             int character=reader.read();
             while (character !=-1){
                 System.out.print((char)character);
