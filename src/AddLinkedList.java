@@ -1,4 +1,5 @@
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
+/*
+
 
 public class AddLinkedList {
     public static LNode add(LNode h1,LNode h2){
@@ -81,3 +82,4 @@ public class AddLinkedList {
             System.out.print(cur.data+"");
     }
 }
+*/
