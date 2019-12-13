@@ -1,8 +1,7 @@
 
 
 public class Reverse {
-
-
+/*    //方法1：就地逆序
     public static void Reverse(LNode head){
         if(head==null||head.next==null)
             return;
@@ -25,6 +24,7 @@ public class Reverse {
         head.next=cur;
     }
 
+
     public static void main(String[] args){
         LNode head=new LNode();
         head.next=null;
@@ -44,5 +44,43 @@ public class Reverse {
         Reverse(head);
         for (cur=head.next;cur!=null;cur=cur.next)
             System.out.print(cur.data+"");
+    }*/
+
+
+/*    //方法2：递归
+    private static LNode RecursiveReverse(LNode head){
+        if (head==null||head.next==null)
+            return head;
+        else {
+            LNode newhead=RecursiveReverse(head.next);
+            head.next.next=head;
+            head.next=null;
+            return newhead;
+        }
     }
+
+    public static void Reverse(LNode head){
+        if (head==null)
+            return;
+        LNode firstNode=head.next;
+        LNode newhead=RecursiveReverse(firstNode);
+        head.next=newhead;
+    }*/
+
+    //方法3：插入法
+    public static void Reverse(LNode head){
+        if (head==null||head.next==null)
+            return;
+        LNode cur=null;
+        LNode next=null;
+        cur=head.next.next;
+        head.next.next=null;
+        while (cur!=null){
+            next=cur.next;
+            cur.next=head.next;
+            head.next=cur;
+            cur=next;
+        }
+    }
+
 }
